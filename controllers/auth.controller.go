@@ -54,8 +54,7 @@ func SignUpUser(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusBadGateway).JSON(fiber.Map{"status": "error", "message": "Something bad happened"})
 	}
 
-	// email
-	// The code below is from your initial code
+
 	config, _ := initializers.LoadConfig(".")
 	code := randstr.String(20)
 	verificationCode := utils.Encode(code)
@@ -200,7 +199,7 @@ func renderConfirmationTemplate(c *fiber.Ctx) error {
 
 	// Render the template and send the output to the client
 	return c.Render("index", fiber.Map{
-		"Title": "Mission Accomplished!",
+		"Title": "Hello, World!",
 	})
 	
 }
