@@ -21,6 +21,6 @@
 go.work
 go.work.sum
 
-test.db
-.env
+# test.db
+# .env
 commit.txt
